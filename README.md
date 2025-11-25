@@ -15,8 +15,24 @@ Hardware – PCs, Cyclone II , USB flasher
 **Software – Quartus prime**
 
 **Theory**
-
+ Boolean function minimization is the process of simplifying Boolean algebraic
+ expressions to reduce the number of logic gates and complexity in a digital circuit,
+ leading to more efficient, faster, and less costly hardware
+ For minimizing Boolean expressions,we can use a set of rules and laws (like distributive,
+ associative, and complement laws) to simplify Boolean expressions. This method
+ focuses on applying algebraic manipulations to reduce the complexity of the expression
+ by eliminating redundant terms.
+ Identity Law A ⋅ 1 = A, A + 0 = A
+ Null Law A ⋅ 0 = 0, A + 1 = 1
+  Idempotent Law A ⋅ A = A, A + A = A
+ Complement Law A ⋅ A′ = 0, A + A' = 1
+ Distributive Law A ⋅ (B + C) = A ⋅ B + A ⋅ C
+ De Morgan’s Law (A ⋅ B)′ = A′ + B', (A + B)′ = A′ ⋅ B′
+ Absorption Law A ⋅ (A + B) = A, A + (A ⋅ B) = A
+ Associative Law A + (B + C) = (A + B) + C, A.(B.C) = (A.B).C
+ Commutative law A B = B A,A + B = B + A
 **Logic Diagram**
+
 
 **Procedure**
 
@@ -32,17 +48,33 @@ Hardware – PCs, Cyclone II , USB flasher
 
 
 **Program:**
+ module funct1(a,b,c,d,f1);
+ input a,b,c,d;
+ output f1;
+ assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
+ endmodule
+ ii)
+ module funct2(w,x,y,z,f2);
+ input w,x,y,z;
+ output f2;
+ assign f2=((~y & z)|( w & y )|(x & y));
+ endmodule
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:*/
+Developed by:A.Shruthilaya RegisterNumber:25018192
 
 
 **RTL realization**
 
+![image](https://github.com/user-attachments/assets/62e87efe-e486-47f6-880e-0a592a04d206)
+![image](https://github.com/user-attachments/assets/13473175-da3d-4192-a339-602811f9743a)
+
 **Output:**
 
 **RTL**
+![image](https://github.com/user-attachments/assets/28214a8d-fa6a-496d-94ff-fb1cc48c2f7a)
+![image](https://github.com/user-attachments/assets/98c68766-a251-4aed-add6-c2afa16feceb)
 
 **Timing Diagram**
 
